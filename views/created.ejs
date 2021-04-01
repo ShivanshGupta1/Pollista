@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--Import Google Icon Font-->
+
+<link rel="stylesheet" href="public/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="public/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="public/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+<style>
+  .links:hover{
+    text-decoration: underline;
+ 
+  }
+</style>
+</head>
+<body>
+  <nav style="background-color: #28A745; height: 350px; ">
+    <div class="nav-wrapper">
+     
+      <a href="#" class="brand-logo" style="text-align: center; margin-left: 25%; margin-top: 15%;">SUCCESS! YOUR POLL IS NOW LIVE!</a>
+     
+    </div>
+  </nav>
+  <p>To send it to your friends, copy the message below - </p>
+ <hr>
+ <textarea id="text" cols="30" rows="10" style="height: 90px;">Hi There! I have created a poll at Pollista! It's a short 5 second survey for you to take! Click the link - http://localhost:3000/viewpoll and put the smart code - "<%= Results[Results.length-1].code %>" to view my survey! Check out Pollista and create your own short survey!</textarea>
+  <button class="btn" onclick="myFunction()">Copy Message</button>
+  <hr>
+  <p>To see the results click <a href="http://localhost:3000/see-results">here</a></p>
+  <p>To see the poll click <a href="http://localhost:3000/viewpoll">here</a></p>
+  
+
+
+
+  
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="public/materialize.js"></script>
+<script src="public/init.js"></script>
+<script>
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("text");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text!");
+}
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!--Import materialize.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</html>
+<!--  

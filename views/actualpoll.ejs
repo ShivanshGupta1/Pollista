@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <script
+    type="text/javascript"
+    src="https://www.gstatic.com/charts/loader.js"
+  ></script>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <style>
+    .col {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px;
+      margin-left: 100px;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      height: 550px;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center;">HI THERE!</h1>
+    <h2 style="text-align: center;">Below is my survey!</h2>
+    <form action="/auth" method="POST" style="margin-left: 35%;">
+      
+      <div class="form">
+        
+        <label for="floatingPassword"><%= data[0].q1.name%></label>
+        <br />
+
+        <input type="radio" name="q1" value="q1o1" required/>
+        <%= data[0].q1.q1o1.name  %>
+        <br />
+
+        <input type="radio" name="q1" value="q1o2" required/>
+        <%= data[0].q1.q1o2.name  %>
+        <br />
+
+        <input type="radio" name="q1" value="q1o3" required/>
+        <%= data[0].q1.q1o3.name  %>
+        <br />
+
+        <input type="radio" name="q1" value="q1o4" required/>
+        <%= data[0].q1.q1o4.name  %>
+        <br />
+
+        <label for="floatingPassword"><%= data[0].q2.name%> </label>
+        <br />
+
+        <input type="radio" name="q2" value="q2o1" required/>
+        <%= data[0].q2.q2o1.name %>
+        <br />
+
+        <input type="radio" name="q2" value="q2o2" required/>
+        <%= data[0].q2.q2o2.name %>
+        <br />
+
+        <input type="radio" name="q2" value="q2o3" required/>
+        <%= data[0].q2.q2o3.name %>
+        <br />
+
+        <input type="radio" name="q2" value="q2o4" required/>
+        <%= data[0].q2.q2o4.name %>
+        <br />
+
+        <label for="floatingPassword"><%= data[0].q3.name%></label>
+        <br />
+
+        <input type="radio" name="q3" value="q3o1" required/>
+        <%= data[0].q3.q3o1.name %>
+        <br />
+
+        <input type="radio" name="q3" value="q3o2" required/>
+        <%= data[0].q3.q3o2.name %>
+        <br />
+
+        <input type="radio" name="q3" value="q3o3" required/>
+        <%= data[0].q3.q3o3.name %>
+        <br />
+
+        <input type="radio" name="q3" value="q4o4" required/>
+        <%= data[0].q3.q3o4.name %>
+        <br />
+
+        <label for="code3"> Please REnter your code for the last time! For us to count your vote!</label>
+        <br />
+        <label for="code">Code:</label>
+        <input type="text" name="code" placeholder="foodsurvey3724" id="code3" required/>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+ 
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

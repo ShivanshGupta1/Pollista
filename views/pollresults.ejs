@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            display: table;
+  margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+  <div style="text-align: center;" >
+    <h1>Results</h1>
+    <% for(i=0;i<Results.length;i++){%>
+
+        <% if(Results[i].code==code){ %>
+            <% var total1 = Results[i].q1.q1o1.count+ Results[i].q1.q1o2.count + Results[i].q1.q1o3.count+ Results[i].q1.q1o4.count %>
+            <% var total2 = Results[i].q2.q2o1.count+ Results[i].q2.q2o2.count + Results[i].q2.q2o3.count+ Results[i].q2.q2o4.count %>
+            <% var total3 = Results[i].q3.q3o1.count+ Results[i].q3.q3o2.count + Results[i].q3.q3o3.count+ Results[i].q3.q3o4.count %>
+            <h3>Q1 <%= Results[i].q1.name %></h3>
+            <ol>
+                <li>Option 1 - <%= Results[i].q1.q1o1.name %> = <%= Math.floor((Results[i].q1.q1o1.count/total1) * 100) %>% </li>
+                <li>Option 2 - <%= Results[i].q1.q1o2.name %> = <%= Math.floor((Results[i].q1.q1o2.count/total1) * 100) %>% </li>
+                <li>Option 3 - <%= Results[i].q1.q1o3.name %> = <%= Math.floor((Results[i].q1.q1o3.count/total1) * 100) %>% </li>
+                <li>Option 4 - <%= Results[i].q1.q1o4.name %> = <%= Math.floor((Results[i].q1.q1o4.count/total1) * 100) %>% </li>
+            </ol>
+            <h3>Q2 <%= Results[i].q2.name %></h3>
+            <ol>
+                <li>Option 1 - <%= Results[i].q2.q2o1.name %> = <%= Math.floor((Results[i].q2.q2o1.count/total2) * 100) %>% </li>
+                <li>Option 2 - <%= Results[i].q2.q2o2.name %> = <%= Math.floor((Results[i].q2.q2o2.count/total2) * 100) %>% </li>
+                <li>Option 3 - <%= Results[i].q2.q2o3.name %> = <%= Math.floor((Results[i].q2.q2o3.count/total2) * 100) %>% </li>
+                <li>Option 4 - <%= Results[i].q2.q2o4.name %> = <%= Math.floor((Results[i].q2.q2o4.count/total2) * 100) %>% </li>
+            </ol>
+            <h3>Q3 <%= Results[i].q3.name %></h3>
+            <ol>
+                <li>Option 1 - <%= Results[i].q3.q3o1.name %> = <%= Math.floor((Results[i].q3.q3o1.count/total3) * 100) %>% </li>
+                <li>Option 2 - <%= Results[i].q3.q3o2.name %> = <%= Math.floor((Results[i].q3.q3o2.count/total3) * 100) %>% </li>
+                <li>Option 3 - <%= Results[i].q3.q3o3.name %> = <%= Math.floor((Results[i].q3.q3o3.count/total3) * 100) %>% </li>
+                <li>Option 4 - <%= Results[i].q3.q3o4.name %> = <%= Math.floor((Results[i].q3.q3o4.count/total3) * 100) %>% </li>
+            </ol>
+       <% } %>
+
+       <%}%>
+    </div>
+
+</body>
+
+</html>
